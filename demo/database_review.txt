@@ -1,0 +1,15 @@
+you cannot rollback DDL such as CREATE a table
+you cannot rollback anyting after you do a DDL, everything before the DDL statement will automaitcly commit.
+
+FLASHBACK TABLE d11Temp TO BEFORE DROP
+SHOW RecycleBin
+
+PURGE RecycleBin
+
+ROLLBACK TO A;
+
+SELECT * FROM ALL_OBJECTS;
+SELECT * FROM ALL_OBJECTS WHERE upper(owner) NOT IN ('SYS', 'PUBLIC');
+SELECT * FROM ALL_OBJECT WHERE upper(owner) = 'DBS301-191B45';
+
+
