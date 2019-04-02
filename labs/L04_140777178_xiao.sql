@@ -13,7 +13,8 @@ SELECT (avg(salary)- min(salary)) AS "Difference"
     
 --2.	Display the department number and Highest, Lowest and Average pay 
 
-SELECT department_id, to_char(max(salary),'$999,999.00') AS "Highest salary", to_char(min(salary), '$999,999.00') AS "Lowest salary",to_char(avg(salary),'$999,999.00') AS "Average salary"
+SELECT department_id, to_char(max(salary),'$999,999.00') AS "Highest salary", to_char(min(salary), '$999,999.00') 
+                         AS "Lowest salary",to_char(avg(salary),'$999,999.00') AS "Average salary"
     FROM employees
     GROUP BY department_id
     ORDER BY avg(salary) DESC;
@@ -48,7 +49,8 @@ SELECT job_id, sum(salary) AS "TOTAL SALARY PER MONTH"
 
 --6.	For each department show the latest and earliest hire date, BUT
 --      exclude departments 10 and 20 
---      exclude those departments where the last person was hired in this decade. (it is okay to hard code dates in this question only)
+--      exclude those departments where the last person was hired in this decade. (it is okay to hard code dates 
+--                         in this question only)
 --      Sort the output so that the most recent, meaning latest hire dates, are shown first.
 
 SELECT min(hire_date) AS "earliest", max(hire_date) AS "Latest"
