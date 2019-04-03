@@ -30,7 +30,7 @@ SELECT country_id, country_name
 --3.	The Vice President needs very quickly a list of departments 10, 50, 20 
 --  in that order. job and department ID are to be displayed.
 
-SELECT job_id, department_id 
+SELECT DISTINCT job_id, department_id 
     FROM employees
     WHERE department_id =10
 UNION ALL
@@ -38,7 +38,7 @@ SELECT DISTINCT job_id, department_id
     FROM employees
     WHERE department_id =50
 UNION ALL
-SELECT job_id, department_id 
+SELECT DISTINCT job_id, department_id 
     FROM employees
     WHERE department_id =20;
     
